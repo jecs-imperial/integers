@@ -1,0 +1,6 @@
+{
+  "dependencies": [
+    "natural-numbers",
+    "negatives"
+  ]
+}
