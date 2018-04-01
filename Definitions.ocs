@@ -1,0 +1,11 @@
+
+Type Integer
+
+Type NaturalNumber:Integer
+
+Axiom 
+  n:NaturalNumber -> -n:Integer
+
+Axiom
+  zero=-zero
+
