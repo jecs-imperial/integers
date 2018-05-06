@@ -1,10 +1,9 @@
-
 Type Integer
 
 Type NaturalNumber:Integer
 
 Axiom 
-  n:NaturalNumber -> -n:Integer
+  n:NaturalNumber iff -n:Integer
 
 Axiom
   zero=-zero
