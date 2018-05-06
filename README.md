@@ -3,7 +3,7 @@
 Integers for the [Occam](http://djalbat.com/occam) proof assistant.
 
 This package is somewhat experimental. 
-The idea is to define integers as either natural numbers, or natural numbers preceeded by a negative sign.
+The idea is to define integers as either natural numbers or as natural numbers preceeded by a negative sign.
 Put another way, the approach is not to have, say, two constructors for `zero`, one of type `NaturalNumber` and one of type `Integer`:
 ```
 Type NaturalNumber
@@ -13,7 +13,7 @@ Type Integer
 Constructor zero:Integer
 ```
 Overloading constructors in this manner would mean decorating them in some way under the hood, so to speak.
-When the user encounters `zero`, it would be ambiguous as to whether the term was a natural number or an integer.
+When the user encounters `zero`, it would be ambiguous as to whether the term were a natural number or an integer.
 
 Instead, the types themselves are overloaded, specifically:
 ```
@@ -24,7 +24,7 @@ Type NaturalNumber:Integer
 ```
 Now the term `zero` is both a natural number and an integer, because the  re-declaration of the `NaturalNumber` type ensures that all natural numbers are integers.
 Note that since this package depends on the [natural numbers](https://openmathematics.org/#natural-numbers) package, this is indeed a re-declaration.
-Re-declarations in order to afford what is effectively sub-typing are one reason why this package should be regarded as experimental.
+Re-declarations in order to afford sub-typing are one reason why this package should be regarded as experimental.
 
 To continue, negative integers are then defined axiomatically:
 ```
@@ -42,20 +42,20 @@ A possible, but admittedly extremely ugly, alternative is the following:
 ```
 Constructors NaturalNumber:Integer,-NaturalNumber:Integer
 ```
-This avoids any dependency on propositional logic, it should be possible to define integers without recourse to logic after all.
+This avoids any dependency on propositional logic, it could be argued that it should be possible to define integers without recourse to logic after all.
 But it is not immediately obvious how to extend the grammar to support this construction, or even whether it would be desirable if possible to do so.
-So for the moment the re-declaration of the type in order to afford sub-typing, together with the axioms, stay.
+So for the moment the re-declaration of types in order to afford sub-typing, together with the axioms, stays.
 
 ## Notes
 
 * As of writing, the [Florence vernacular](https://raw.githubusercontent.com/occam-proof-assistant/Parsers/master/es6/florence/bnf.js) does not support sub-typing.
 Support could be added by replacing this line...
 ```
-typeDeclaration  ::=   typeName ;
+typeDeclaration ::= typeName ;
 ```
 ...with the following:
 ```
-typeDeclaration  ::=   typeName ( ":" typeName )? ;
+typeDeclaration ::= typeName ( ":" typeName )? ;
 ```
 
 ## Contact
