@@ -13,7 +13,7 @@ Type Integer
 Constructor zero:Integer
 ```
 Overloading constructors in this manner would mean decorating them in some way under the hood, so to speak.
-When the user encounters `zero`, it would be ambiguous as to whether the term were a natural number or an integer.
+When the user encounters `zero`, it would be unclear as to whether the term were a natural number or an integer.
 
 Instead, the types themselves are overloaded, specifically:
 ```
@@ -35,7 +35,7 @@ Axiom
   zero=-zero
 ```
 Again this is arguable.
-It requires a dependency on propositional logic that might otherwise be avoided.
+It requires a dependency on [propositional logic](https://openmathematics.org/#propositional-logic) that might otherwise be avoided.
 Its advantage is that it is easy to extend expressions to support terms such as `-n`, see the [negatives](https://openmathematics.org/#negatives) package.
 
 A possible, but admittedly extremely ugly, alternative is the following:
@@ -43,7 +43,7 @@ A possible, but admittedly extremely ugly, alternative is the following:
 Constructors NaturalNumber:Integer,-NaturalNumber:Integer
 ```
 This avoids any dependency on propositional logic, it could be argued that it should be possible to define integers without recourse to logic after all.
-But it is not immediately obvious how to extend the grammar to support this construction, or even whether it would be desirable if possible to do so.
+But it is not immediately obvious how to extend the grammar to support this construction.
 So for the moment the re-declaration of types in order to afford sub-typing, together with the axioms, stays.
 
 ## Notes
