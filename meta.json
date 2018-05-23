@@ -1,7 +1,3 @@
 {
-  "dependencies": [
-    "propositional-logic",
-    "natural-numbers",
-    "negatives"
-  ]
+  "repository": "https://github.com/jecs-imperial/integers"
 }
