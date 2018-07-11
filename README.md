@@ -24,7 +24,7 @@ Type NaturalNumber:Integer
 ```
 Now the term `zero` is both a natural number and an integer, because the  re-declaration of the `NaturalNumber` type ensures that all natural numbers are integers.
 Note that since this package depends on the [natural numbers](https://openmathematics.org/#natural-numbers) package, this is indeed a re-declaration.
-Re-declarations in order to afford sub-typing are one reason why this package should be regarded as experimental.
+Re-declarations in order to afford sub-typing are one reason why this package should be regarded as experimental. One possible solution is to add the `Integer` type definition to the [natural-numbers](https://openmathematics.org/#natural-numbers) itself.
 
 To continue, negative integers are then defined axiomatically:
 
