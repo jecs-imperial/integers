@@ -27,6 +27,7 @@ Note that since this package depends on the [natural numbers](https://openmathem
 Re-declarations in order to afford sub-typing are one reason why this package should be regarded as experimental.
 
 To continue, negative integers are then defined axiomatically:
+
 ```
 Axiom 
   n:NaturalNumber iff -n:Integer
@@ -34,6 +35,7 @@ Axiom
 Axiom
   zero=-zero
 ```
+
 Again this is arguable.
 It requires a dependency on [propositional logic](https://openmathematics.org/#propositional-logic) that might otherwise be avoided.
 Its advantage is that it is easy to extend expressions to support terms such as `-n`, see the [negatives](https://openmathematics.org/#negatives) package.
