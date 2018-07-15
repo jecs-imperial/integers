@@ -24,7 +24,7 @@ Type NaturalNumber:Integer
 ```
 Now the term `zero` is both a natural number and an integer, because the  re-declaration of the `NaturalNumber` type ensures that all natural numbers are integers.
 Note that since this package depends on the [natural numbers](https://openmathematics.org/#natural-numbers) package, this is indeed a re-declaration.
-Re-declarations in order to afford sub-typing are one reason why this package should be regarded as experimental. One possible solution is to add the `Integer` type definition to the [natural-numbers](https://openmathematics.org/#natural-numbers) itself.
+Re-declarations in order to afford sub-typing are one reason why this package should be regarded as experimental. One possible way around this might be to add the `Integer` type definition to the natural numbers package itself.
 
 To continue, negative integers are then defined axiomatically:
 
@@ -41,9 +41,11 @@ It requires a dependency on [propositional logic](https://openmathematics.org/#p
 Its advantage is that it is easy to extend expressions to support terms such as `-n`, see the [negatives](https://openmathematics.org/#negatives) package.
 
 A possible, but admittedly extremely ugly, alternative is the following:
+
 ```
 Constructors NaturalNumber:Integer,-NaturalNumber:Integer
 ```
+
 This avoids any dependency on propositional logic, it could be argued that it should be possible to define integers without recourse to logic after all.
 But it is not immediately obvious how to extend the grammar to support this construction.
 So for the moment the re-declaration of types in order to afford sub-typing, together with the axioms, stays.
@@ -52,10 +54,13 @@ So for the moment the re-declaration of types in order to afford sub-typing, tog
 
 * As of writing, the [Florence vernacular](https://raw.githubusercontent.com/occam-proof-assistant/Parsers/master/es6/florence/bnf.js) does not support sub-typing.
 Support could be added by replacing this line...
+
 ```
 typeDeclaration ::= typeName ;
 ```
+
 ...with the following:
+
 ```
 typeDeclaration ::= typeName ( ":" typeName )? ;
 ```
