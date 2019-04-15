@@ -1,6 +1,7 @@
 {
+  "repository": "https://github.com/jecs-imperial/integers",
   "dependencies": [
-    "natural-numbers"
-  ],
-  "repository": "https://github.com/jecs-imperial/integers"
+    "natural-numbers",
+    "negatives"
+  ]
 }

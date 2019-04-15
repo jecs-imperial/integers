@@ -1,0 +1,9 @@
+Axiom (NegativeNaturalNumbersAreIntegers)
+  Suppose
+    n:NaturalNumber 
+  Hence
+   -n:Integer
+
+Axiom (ZeroAndNegativeZeroAreEqual)
+  zero=-zero
+
