@@ -1,6 +1,6 @@
 # Integers
 
-Integers for the [Occam](http://djalbat.com/occam) proof assistant.
+Integers for the [Occam](http://occam.science) proof assistant.
 
 ## Contact
 
