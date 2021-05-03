@@ -1,8 +1,7 @@
 # Integers
 
-Integers for the [Occam](http://occam.science) proof assistant.
+Integers for [Occam](https://occam.science).
 
 ## Contact
 
-* james.smith@openmathematics.org
 * http://djalbat.com
